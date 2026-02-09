@@ -299,8 +299,7 @@ export function TicTacToe({ roomId, matchId, initialState, onRestart, onBackToLo
             {/* Winner Overlay */}
             {winner && (
                 <WinnerOverlay
-                    winner={winner === "DRAW" ? "DRAW" : playersInfo[Object.keys(players).find(key => players[key] === winner) || ""]?.name || winner}
-                    onRestart={onRestart}
+                    winnerName={winner === "DRAW" ? "DRAW" : playersInfo[Object.keys(players).find(key => players[key] === winner) || ""]?.name || winner}
                     onBackToLobby={onBackToLobby}
                 />
             )}
